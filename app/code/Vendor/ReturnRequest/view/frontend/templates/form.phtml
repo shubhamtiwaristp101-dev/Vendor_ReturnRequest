@@ -1,0 +1,81 @@
+<div class="block block-return-request">
+    <div class="block-title">
+        <strong><?= __('Return Request Form') ?></strong>
+    </div>
+    <div class="block-content">
+        <form action="<?= $block->getFormActionUrl() ?>"
+              method="post"
+              enctype="multipart/form-data"
+              class="form form-return-request"
+              id="return-request-form"
+              data-mage-init='{"validation":{}}'>
+            <?= $block->getBlockHtml('formkey') ?>
+
+            <fieldset class="fieldset">
+
+                <!-- Order ID (readonly) -->
+                <div class="field required">
+                    <label for="order_id" class="label"><span><?= __('Order ID') ?></span></label>
+                    <div class="control">
+                        <input type="text"
+                               id="order_id"
+                               name="order_id"
+                               class="input-text"
+                               readonly
+                               value="<?= $block->escapeHtml($block->getOrderIncrementId()) ?>" />
+                    </div>
+                </div>
+
+                <!-- Hidden Customer ID -->
+                <input type="hidden" name="customer_id" value="<?= $block->escapeHtml($block->getCustomerId()) ?>" />
+
+                <!-- Reason -->
+                <div class="field required">
+                    <label for="reason" class="label"><span><?= __('Reason') ?></span></label>
+                    <div class="control">
+                        <select name="reason" id="reason" class="select" required data-validate='{"required":true}'>
+                            <option value=""><?= __('Select Reason') ?></option>
+                            <?php foreach ($block->getReasonOptions() as $option): ?>
+                                <option value="<?= $block->escapeHtml($option['value']) ?>">
+                                    <?= $block->escapeHtml($option['label']) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="field required">
+                    <label for="description" class="label"><span><?= __('Description') ?></span></label>
+                    <div class="control">
+                        <textarea name="description"
+                                  id="description"
+                                  rows="5"
+                                  class="input-text"
+                                  data-validate='{"required":true}'></textarea>
+                    </div>
+                </div>
+
+                <!-- Image Upload -->
+                <div class="field">
+                    <label for="image" class="label"><span><?= __('Upload Image') ?></span></label>
+                    <div class="control">
+                        <input type="file" name="image" id="image" class="input-file" accept="image/*" />
+                    </div>
+                </div>
+
+                <!-- Request Date -->
+                <input type="hidden" name="request_date" value="<?= date('Y-m-d') ?>" />
+
+                <!-- Submit Button -->
+                <div class="actions-toolbar">
+                    <div class="primary">
+                        <button type="submit" class="action primary">
+                            <span><?= __('Submit Request') ?></span>
+                        </button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

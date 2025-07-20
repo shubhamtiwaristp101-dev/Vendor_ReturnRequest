@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin" title="Admin">
+                <resource id="Magento_Backend::content">
+                    <resource id="Vendor_ReturnRequest::returnrequest" title="Return Requests"/>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Vendor_ReturnRequest::config" title="Return Request Configuration" sortOrder="100"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

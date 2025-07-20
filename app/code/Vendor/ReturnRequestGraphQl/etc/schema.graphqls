@@ -1,0 +1,33 @@
+type ReturnRequest {
+    return_id: Int
+    order_id: Int
+    reason: String
+    description: String
+    status: String
+    created_at: String
+}
+
+type CustomerReturnRequestsOutput {
+    items: [ReturnRequest]
+    total_count: Int
+}
+
+type Query {
+    customerReturnRequests: CustomerReturnRequestsOutput @resolver(class: "Vendor\\ReturnRequestGraphQl\\Model\\Resolver\\CustomerReturnRequests") @authenticated
+}
+
+input ReturnRequestInput {
+    order_id: Int!
+    reason: String!
+    description: String
+    image: String
+}
+
+type ReturnRequestOutput {
+    success: Boolean
+    message: String
+}
+
+type Mutation {
+    submitReturnRequest(input: ReturnRequestInput!): ReturnRequestOutput @resolver(class: "Vendor\\ReturnRequestGraphQl\\Model\\Resolver\\SubmitReturnRequest") @authenticated
+}

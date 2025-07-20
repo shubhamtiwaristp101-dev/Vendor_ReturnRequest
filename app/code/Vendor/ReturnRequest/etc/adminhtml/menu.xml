@@ -1,0 +1,14 @@
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Vendor_ReturnRequest::returnrequest"
+             title="Return Requests"
+             translate="title"
+             module="Vendor_ReturnRequest"
+             sortOrder="99"
+             parent="Magento_Sales::sales"
+             action="returnrequest/returnrequest/"
+             resource="Vendor_ReturnRequest::returnrequest"/>
+    </menu>
+</config>

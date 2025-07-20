@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Mail/etc/email_templates.xsd">
+
+    <template id="return_request_admin_email_template_new"
+              label="Return Request - New"
+              file="return_request_new.html"
+              type="html"
+              module="Vendor_ReturnRequest"
+              area="frontend"/>
+
+    <template id="return_request_email_template_approved"
+              label="Return Request - Approved"
+              file="return_request_approved.html"
+              type="html"
+              module="Vendor_ReturnRequest"
+              area="frontend"/>
+
+    <template id="return_request_email_template_rejected"
+              label="Return Request - Rejected"
+              file="return_request_rejected.html"
+              type="html"
+              module="Vendor_ReturnRequest"
+              area="frontend"/>
+</config>

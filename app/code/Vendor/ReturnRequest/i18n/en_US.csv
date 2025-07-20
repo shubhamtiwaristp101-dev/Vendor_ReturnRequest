@@ -1,0 +1,67 @@
+"Return Requests","Return Requests"
+"Please correct the data sent.","Please correct the data sent."
+"Please select requests(s).","Please select requests(s)."
+"Status changed Successfully","Status changed Successfully"
+%1,%1
+"Can't process approval/reject for some request.","Can't process approval/reject for some request."
+"Create Return Request","Create Return Request"
+"My Return Requests","My Return Requests"
+"Missing required data.","Missing required data."
+"Invalid Order ID.","Invalid Order ID."
+"Return request submitted successfully.","Return request submitted successfully."
+"Something went wrong while submitting your request.","Something went wrong while submitting your request."
+"Invalid Form Key. Please refresh the page.","Invalid Form Key. Please refresh the page."
+New,New
+Approved,Approved
+Rejected,Rejected
+"Damaged Product","Damaged Product"
+"Wrong Item Delivered","Wrong Item Delivered"
+"Not Satisfied","Not Satisfied"
+Other,Other
+"Something went wrong while saving the file(s).","Something went wrong while saving the file(s)."
+"File can not be saved to the destination folder.","File can not be saved to the destination folder."
+"The return request with the ""%1"" ID doesn't exist.","The return request with the ""%1"" ID doesn't exist."
+"Unable to send return request email to admin: ","Unable to send return request email to admin: "
+"Return Request Form","Return Request Form"
+"Order ID","Order ID"
+Reason,Reason
+"Select Reason","Select Reason"
+Description,Description
+"Upload Image","Upload Image"
+"Submit Request","Submit Request"
+Orders,Orders
+"Order #","Order #"
+Date,Date
+"Order Total","Order Total"
+Status,Status
+Action,Action
+Actions,Actions
+"View Order","View Order"
+Reorder,Reorder
+"Cancel Order","Cancel Order"
+"Create Return","Create Return"
+"Return Request Approved","Return Request Approved"
+"New Return Request Received","New Return Request Received"
+"Return Request Rejected","Return Request Rejected"
+"Return Request","Return Request"
+"Return Request Settings","Return Request Settings"
+General,General
+"Enable Return Requests","Enable Return Requests"
+"Customer Return Request Email Notification","Customer Return Request Email Notification"
+Enabled,Enabled
+"Return Request Email Sender","Return Request Email Sender"
+"Email Template for Approval","Email Template for Approval"
+"Email Template for Rejection","Email Template for Rejection"
+"Send Return Request Email Copy To","Send Return Request Email Copy To"
+Comma-separated.,Comma-separated.
+"Send Return Request Email Copy Method","Send Return Request Email Copy Method"
+"Admin Return Request Email Notification","Admin Return Request Email Notification"
+"Admin Email","Admin Email"
+"Email Template for New Request","Email Template for New Request"
+"Change status","Change status"
+Approve,Approve
+Reject,Reject
+"Return ID","Return ID"
+"Customer Email","Customer Email"
+"Created At","Created At"
+"My Returns","My Returns"

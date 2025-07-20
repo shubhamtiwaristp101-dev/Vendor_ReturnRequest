@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <return_request>
+            <general>
+                <enabled>1</enabled>
+            </general>
+            <admin_email>
+                <enabled>1</enabled>
+                <template>return_request_admin_email_template_new</template>
+                <identity>sales</identity>
+                <copy_method>bcc</copy_method>
+            </admin_email>
+        </return_request>
+
+    </default>
+</config>

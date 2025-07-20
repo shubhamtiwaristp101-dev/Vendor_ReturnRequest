@@ -1,0 +1,34 @@
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:Ecommerce:module:Ecommerce_Webapi:etc/webapi.xsd">
+    <route url="/V1/returnrequest/:id" method="GET">
+        <service class="Vendor\ReturnRequest\Api\ReturnRequestRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Vendor_ReturnRequest::returnrequest"/>
+        </resources>
+    </route>
+    <route url="/V1/returnrequest/search" method="GET">
+        <service class="Vendor\ReturnRequest\Api\ReturnRequestRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Vendor_ReturnRequest::returnrequest"/>
+        </resources>
+    </route>
+    <route url="/V1/returnrequest" method="POST">
+        <service class="Vendor\ReturnRequest\Api\ReturnRequestRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Vendor_ReturnRequest::returnrequest"/>
+        </resources>
+    </route>
+    <route url="/V1/returnrequest/:id" method="PUT">
+        <service class="Vendor\ReturnRequest\Api\ReturnRequestRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Vendor_ReturnRequest::returnrequest"/>
+        </resources>
+    </route>
+    <route url="/V1/returnrequest/:id" method="DELETE">
+        <service class="Vendor\ReturnRequest\Api\ReturnRequestRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Vendor_ReturnRequest::returnrequest"/>
+        </resources>
+    </route>
+</routes>

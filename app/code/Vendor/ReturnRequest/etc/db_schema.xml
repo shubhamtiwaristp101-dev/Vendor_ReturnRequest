@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="vendor_return_request" resource="default" engine="innodb" comment="Return Request Table">
+        <column xsi:type="int" name="return_id" unsigned="true" nullable="false" identity="true" comment="Return ID"/>
+        <column xsi:type="varchar" name="order_id" length="255" nullable="false" comment="Order ID"/>
+        <column xsi:type="int" name="customer_id" unsigned="true" nullable="false" comment="Customer ID"/>
+        <column xsi:type="varchar" name="reason" nullable="false" length="255" comment="Return Reason"/>
+        <column xsi:type="text" name="description" nullable="true" comment="Description"/>
+        <column xsi:type="varchar" name="image" nullable="true" length="255" comment="Image Path"/>
+        <column xsi:type="varchar" name="status" nullable="false" length="32" default="new" comment="Status"/>
+        <column xsi:type="timestamp" name="date_of_request" on_update="false" nullable="false"
+                default="CURRENT_TIMESTAMP" comment="Date of request"/>
+        <column xsi:type="timestamp" name="creation_time" on_update="false" nullable="false"
+                default="CURRENT_TIMESTAMP" comment="Creation Time"/>
+        <column xsi:type="timestamp" name="update_time" on_update="false" nullable="false"
+                default="CURRENT_TIMESTAMP" comment="Modification Time"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="return_id"/>
+        </constraint>
+
+        <index referenceId="VENDOR_RETURN_REQUEST_ORDER_ID" indexType="btree">
+            <column name="order_id"/>
+        </index>
+        <index referenceId="VENDOR_RETURN_REQUEST_CUSTOMER_ID" indexType="btree">
+            <column name="customer_id"/>
+        </index>
+
+<!--        <index referenceId="VENDOR_RETURN_REQUEST_FULL_TEXT_SEARCH" indexType="fulltext">-->
+<!--            <column name="customer_id"/>-->
+<!--        </index>-->
+    </table>
+
+</schema>
